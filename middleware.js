@@ -11,6 +11,8 @@ export async function middleware(req, ev) {
     (redirect) => req.nextUrl.pathname === redirect.source
   );
 
+  console.log(redirections);
+
   if (redirect && redirect?.status === "410") {
     return NextResponse.rewrite(new URL(redirect.destination, req.url));
   }
