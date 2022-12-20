@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCj_mNiNFtnaWd0o0pdQ_r2FoegUibs-OM",
+  apiKey: process.env.NEXT_PUBLIC_GOOGLE_API_KEY,
   authDomain: "soleilex-d817e.firebaseapp.com",
   projectId: "soleilex-d817e",
   storageBucket: "soleilex-d817e.appspot.com",
