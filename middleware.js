@@ -2,9 +2,9 @@ import { NextFetchEvent, NextResponse } from "next/server";
 import { getData } from "./pages/api/redirections";
 
 export async function middleware(req, ev) {
-  // If page is 200 OK! Skip the middleware
-  const response = await fetch(req.nextUrl.href);
-  if (response.status === 200) return NextResponse.next();
+  // // If page is 200 OK! Skip the middleware
+  // const response = await fetch(req.nextUrl.href);
+  // if (response.status === 200) return NextResponse.next();
 
   const redirections = await getData();
   const redirect = await redirections.find(
