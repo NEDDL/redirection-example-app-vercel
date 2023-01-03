@@ -5,9 +5,12 @@ export async function middleware(req, ev) {
   const response = await fetch(req.nextUrl.href);
   if (response.status === 200) return NextResponse.next();
 
-  const redirections = await fetch("/api/redirections", {
-    method: "get",
-  });
+  const redirections = await fetch(
+    "redirection-example-app-vercel.vercel.app/api/redirections",
+    {
+      method: "get",
+    }
+  );
 
   const redirect = redirections.find(
     (redirect) => req.nextUrl.pathname === redirect.source
