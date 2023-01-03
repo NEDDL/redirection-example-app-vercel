@@ -28,5 +28,7 @@ export async function middleware(req, ev) {
 }
 
 export const config = {
-  matcher: ["/((?!api|_next/static|favicon.ico|robots.txt|assets).*)"],
+  matcher: [
+    "/((?!api|_next/static|favicon.ico|next.svg|thirteen.svg|vercel.svg|robots.txt|assets).*)",
+  ],
 };
